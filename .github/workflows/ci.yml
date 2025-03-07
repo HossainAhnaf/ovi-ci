@@ -1,0 +1,20 @@
+name: ci
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    - master
+  workflows_dispatch:  
+jobs:
+  test:
+    name: Run all tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: action/checkout@4
+      - name: install dep
+        run: npm install
+      - name: run tests
+        run: npm run test
+
+ 

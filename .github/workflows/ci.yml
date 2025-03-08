@@ -12,7 +12,7 @@ jobs:
     name: Run all tests
     runs-on: ubuntu-latest
     steps:
-      - uses: action/checkout@4
+      - uses: actions/checkout@4
       - name: install dep
         run: npm install
       - name: run tests

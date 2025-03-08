@@ -4,8 +4,9 @@ on:
     branches:
       - master
   pull_request:
-    - master
-  workflows_dispatch:  
+    branches:
+      - master
+  workflow_dispatch:  
 jobs:
   test:
     name: Run all tests
